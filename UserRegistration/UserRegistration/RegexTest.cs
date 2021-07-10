@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 namespace UserRegistration
 {
     public class RegexTest
     {
-        public string firstName = "^[A-Z]{1}[a-zA-z]{2,10}";
-        public string lastName = "^[A-Z]{1}[a-zA-z]{2,10}";
-        public string testEmail = "^[A-Za-z0-9+.-]{3,20}@[A-Za-z0-9]{1,10}.+(com|co.in|net|com.au)$";
-        public string mobileNumber = "^[9]{1}[1]{1}\\s[6-9]{1}[0-9]{9}";
-        public string password = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*.-])[a-zA-Z0-9].{7,}$";
+        public string _firstName = "^[A-Z]{1}[a-zA-z]{2,10}";
+        public string _lastName = "^[A-Z]{1}[a-zA-z]{2,10}";
+        public string _testEmail = "^[A-Za-z0-9+.-]{3,20}@[A-Za-z0-9]{1,10}.+(com|co.in|net|com.au)$";
+        public string _mobileNumber = "^[9]{1}[1]{1}\\s[6-9]{1}[0-9]{9}";
+        public string _password = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*.-])[a-zA-Z0-9].{7,}$";
 
 
         /// <summary>
@@ -20,8 +18,12 @@ namespace UserRegistration
         /// <returns></returns>
         public bool TestFirstName(string fName)
         {
-            return Regex.IsMatch(fName, firstName);
+            if (Regex.IsMatch(fName, _firstName) == false)
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_NAME, "First letter of name must be capital");
+
+            return Regex.IsMatch(fName, _firstName);
         }
+
         /// <summary>
         /// Method to test Last Name
         /// </summary>
@@ -29,8 +31,12 @@ namespace UserRegistration
         /// <returns></returns>
         public bool TestLastName(string lName)
         {
-            return Regex.IsMatch(lName, lastName);
+            if (Regex.IsMatch(lName, _lastName) == false)
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_NAME, "First letter of name must be capital");
+
+            return Regex.IsMatch(lName, _lastName);
         }
+
         /// <summary>
         /// Method to test Email
         /// </summary>
@@ -38,8 +44,12 @@ namespace UserRegistration
         /// <returns></returns>
         public bool TestEmail(string email)
         {
-            return Regex.IsMatch(email, testEmail);
+            if (Regex.IsMatch(email, _testEmail) == false)
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_EMAIL, "Invalid email");
+
+            return Regex.IsMatch(email, _testEmail);
         }
+
         /// <summary>
         /// Method to test Mobile Number
         /// </summary>
@@ -47,8 +57,12 @@ namespace UserRegistration
         /// <returns></returns>
         public bool TestMobileNumber(string mNumber)
         {
-            return Regex.IsMatch(mNumber, mobileNumber);
+            if (Regex.IsMatch(mNumber, _mobileNumber) == false)
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_MOBILE_NUMBER, "Please mention country code and put a space after that");
+
+            return Regex.IsMatch(mNumber, _mobileNumber);
         }
+
         /// <summary>
         /// Method to test Password
         /// </summary>
@@ -56,7 +70,10 @@ namespace UserRegistration
         /// <returns></returns>
         public bool TestPassword(string pWord)
         {
-            return Regex.IsMatch(pWord, password);
+            if (Regex.IsMatch(pWord, _password) == false)
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_PASSWORD, "Please follow password setting rules");
+
+            return Regex.IsMatch(pWord, _password);
         }
     }
 }

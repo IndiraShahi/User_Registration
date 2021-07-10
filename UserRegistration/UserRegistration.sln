@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistration", "UserReg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationTest", "UserRegistrationTest\UserRegistrationTest.csproj", "{4DBEA12B-14F2-4BF6-AF4D-20CF1625DD9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationMSTest", "UserRegistrationMSTest\UserRegistrationMSTest.csproj", "{C6A8A4E5-505D-4197-85DF-29539CC99865}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4DBEA12B-14F2-4BF6-AF4D-20CF1625DD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DBEA12B-14F2-4BF6-AF4D-20CF1625DD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DBEA12B-14F2-4BF6-AF4D-20CF1625DD9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A8A4E5-505D-4197-85DF-29539CC99865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A8A4E5-505D-4197-85DF-29539CC99865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A8A4E5-505D-4197-85DF-29539CC99865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A8A4E5-505D-4197-85DF-29539CC99865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
