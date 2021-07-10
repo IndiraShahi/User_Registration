@@ -8,7 +8,7 @@ namespace UserRegistration
     {
         public string firstName = "^[A-Z]{1}[a-zA-z]{2,10}";
         public string lastName = "^[A-Z]{1}[a-zA-z]{2,10}";
-        public string testEmail = "^[A-Za-z0-9.]{3,20}@[A-Za-z]{2,10}.(com|co.in)$";
+        public string testEmail = "^[A-Za-z0-9+.-]{3,20}@[A-Za-z0-9]{1,10}.+(com|co.in|net|com.au)$";
         public string mobileNumber = "^[9]{1}[1]{1}\\s[6-9]{1}[0-9]{9}";
         public string password = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*.-])[a-zA-Z0-9].{7,}$";
 
