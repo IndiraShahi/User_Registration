@@ -10,6 +10,7 @@ namespace UserRegistration
             // Creating object
             RegexTest R = new RegexTest();
             Console.WriteLine(R.TestFirstName("Indira"));
+            Console.WriteLine(R.TestLastName("Shahi"));
         }
     }
 }

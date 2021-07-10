@@ -17,5 +17,14 @@ namespace UserRegistration
         {
             return Regex.IsMatch(fName, firstName);
         }
+        /// <summary>
+        /// Method to test Last Name
+        /// </summary>
+        /// <param name="lName"></param>
+        /// <returns></returns>
+        public bool TestLastName(string lName)
+        {
+            return Regex.IsMatch(lName, lastName);
+        }
     }
 }
