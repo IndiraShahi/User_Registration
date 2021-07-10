@@ -11,6 +11,7 @@ namespace UserRegistration
             RegexTest R = new RegexTest();
             Console.WriteLine(R.TestFirstName("Indira"));
             Console.WriteLine(R.TestLastName("Shahi"));
+            Console.WriteLine(R.TestEmail("abc.xyz@bl.co.in"));
         }
     }
 }
