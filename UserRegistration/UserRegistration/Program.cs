@@ -12,6 +12,7 @@ namespace UserRegistration
             Console.WriteLine(R.TestFirstName("Indira"));
             Console.WriteLine(R.TestLastName("Shahi"));
             Console.WriteLine(R.TestEmail("abc.xyz@bl.co.in"));
+            Console.WriteLine(R.TestMobileNumber("91 9876543210"));
         }
     }
 }
