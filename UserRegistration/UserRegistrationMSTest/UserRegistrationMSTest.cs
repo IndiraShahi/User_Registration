@@ -17,7 +17,7 @@ namespace UserRegistration.UserRegistrationMSTest
             // Act
             try
             {
-                regex.TestFirstName("mayur");
+                regex.TestFirstName("indira");
             }
             catch (UserRegistrationException ex)
             {
@@ -36,7 +36,7 @@ namespace UserRegistration.UserRegistrationMSTest
             // Act
             try
             {
-                regex.TestLastName("wankhade");
+                regex.TestLastName("shahi");
             }
             catch (UserRegistrationException ex)
             {
@@ -55,7 +55,7 @@ namespace UserRegistration.UserRegistrationMSTest
             // Act
             try
             {
-                regex.TestEmail("_mayur.wankhade2@gmail.com");
+                regex.TestEmail("_indira.shahi@gmail.com");
             }
             catch (UserRegistrationException ex)
             {
@@ -74,7 +74,7 @@ namespace UserRegistration.UserRegistrationMSTest
             // Act
             try
             {
-                regex.TestMobileNumber("8082494818");
+                regex.TestMobileNumber("1234567890");
             }
             catch (UserRegistrationException ex)
             {

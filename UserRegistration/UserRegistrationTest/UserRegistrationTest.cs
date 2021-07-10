@@ -17,7 +17,7 @@ namespace UserRegistrationTest
             bool expected = true;
 
             // Act
-            bool result = regex.TestFirstName("Mayur");
+            bool result = regex.TestFirstName("Indira");
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -33,7 +33,7 @@ namespace UserRegistrationTest
             bool expected = false;
 
             // Act
-            bool result = regex.TestFirstName("mayur");
+            bool result = regex.TestFirstName("Indira");
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -49,7 +49,7 @@ namespace UserRegistrationTest
             bool expected = true;
 
             // Act
-            bool result = regex.TestLastName("Wankhade");
+            bool result = regex.TestLastName("Shahi");
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -65,7 +65,7 @@ namespace UserRegistrationTest
             bool expected = false;
 
             // Act
-            bool result = regex.TestLastName("wankhade");
+            bool result = regex.TestLastName("Shahi");
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -81,7 +81,7 @@ namespace UserRegistrationTest
             bool expected = true;
 
             // Act
-            bool result = regex.TestEmail("mayur.wankhade2@gmail.com");
+            bool result = regex.TestEmail("indira.shahi@gmail.com");
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -97,7 +97,7 @@ namespace UserRegistrationTest
             bool expected = true;
 
             // Act
-            bool result = regex.TestMobileNumber("91 8082494818");
+            bool result = regex.TestMobileNumber("91 1234567890");
 
             // Assert
             Assert.AreEqual(expected, result);
@@ -113,7 +113,7 @@ namespace UserRegistrationTest
             bool expected = false;
 
             // Act
-            bool result = regex.TestMobileNumber("8082494818");
+            bool result = regex.TestMobileNumber("1234567890");
 
             // Assert
             Assert.AreEqual(expected, result);
